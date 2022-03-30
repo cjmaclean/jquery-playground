@@ -8,8 +8,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#hider").click(function(){
-                $("#titleheader").hide();
+            $("#hider").mousedown(function(){
+                $("#titleheader").hide(1000);
+            });
+            $("#show-button").click(function(){
+                $("#titleheader").show();
+            });
+            $("#toggle-button").click(function(){
+                $("#titleheader").toggle();
             });
             $("p").mouseenter(function() {
                 alert("entered the paragraph");
@@ -23,5 +29,7 @@
     
     <p>hi</p><p>there</p>
     <button id="hider">Hider button</button>
+    <button id="show-button">Show</button>
+    <button id="toggle-button">Toggle</button>
 </body>
 </html>
