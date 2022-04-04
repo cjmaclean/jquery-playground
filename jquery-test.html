@@ -20,7 +20,12 @@
                 $("#titleheader").show();
             });
             $("#toggle-button").click(function(){
-                $("#titleheader").fadeToggle(2000);
+                $("#titleheader").fadeToggle(
+                    2000,
+                    function(){
+                        $("#toggle-button").text("TOGGLED!");
+                    }
+                );
             });
             $("p").mouseenter(function() {
                 
