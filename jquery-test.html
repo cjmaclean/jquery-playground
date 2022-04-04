@@ -9,7 +9,12 @@
     <script>
         $(document).ready(function() {
             $("#hider").mousedown(function(){
-                $("#titleheader").hide(1000);
+                $("#titleheader").hide(
+                    1000,
+                    function(){
+                        alert("hidden");
+                    }
+                );
             });
             $("#show-button").click(function(){
                 $("#titleheader").show();
