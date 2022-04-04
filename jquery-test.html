@@ -27,13 +27,18 @@
                 console.log("entered the paragraph");
             });
             $("#click-button").click(function() {
-                $("#click-button").animate({
-                    left: '200px',
-                    opacity: '0.25'
-                });
-                $("#click-button").animate({
-                    opacity: '0.75'
-                });
+                $("#click-button")
+                    .animate({
+                        left: '200px',
+                        opacity: '0.25'
+                    })
+                    .animate({
+                        opacity: '0.75'
+                    });
+                    $("#click-button")
+                    .animate({
+                        left: '-=50px',
+                    })
             });
             $("#dont-click-button").mouseenter(function() {
                 $("#dont-click-button").animate({
