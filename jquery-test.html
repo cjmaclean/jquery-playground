@@ -22,13 +22,15 @@
                 console.log("entered the paragraph");
             });
             $("#click-button").click(function() {
-                $("#click-button").animate({left: '200px'});
+                $("#click-button").animate({
+                    left: '200px',
+                    opacity: '0.25'
+            });
                 
             });
             $("#dont-click-button").mouseenter(function() {
                 $("#dont-click-button").animate({
-                    left: '160px',
-                    opacity: '0.25'
+                    left: '+=80px'
                 });
                 
             });
