@@ -21,6 +21,14 @@
                 
                 console.log("entered the paragraph");
             });
+            $("#click-button").click(function() {
+                $("#click-button").animate({left: '200px'});
+                
+            });
+            $("#dont-click-button").mouseenter(function() {
+                $("#dont-click-button").animate({left: '160px'});
+                
+            });
         });
     </script>
 
@@ -32,5 +40,14 @@
     <button id="hider">Hider button</button>
     <button id="show-button">Show</button>
     <button id="toggle-button">Toggle</button>
+    <br/>
+    <button id="click-button"
+      style="position:absolute">Click me!</button>
+    <br/>
+    <button id="dont-click-button"
+      style="position:absolute">
+        Don't click me!
+    </button>
+    
 </body>
 </html>
