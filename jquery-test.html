@@ -32,6 +32,8 @@
                 console.log("entered the paragraph");
             });
             $("#click-button").click(function() {
+                $("#click-button").after("Thanks!");
+                $("#click-button").append(" again");
                 $("#click-button")
                     .animate({
                         left: '200px',
