@@ -22,7 +22,7 @@
                 $("#two-answers").html(
                     "two answers will go here: <span class='answer'>...</span> and <span class='answer'>...</span>");
                 $(".answer").text("to be loaded");
-                $.getJSON("answers-json.js", function(result){
+                $.getJSON("answers-json.php", function(result){
                     $(".answer").first().text(result[0]);
                     $(".answer").eq(1).text(result[1]);
                 });
