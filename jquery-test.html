@@ -17,11 +17,12 @@
                 );
             });
             $("#show-button").click(function(){
-                $("#titleheader").show();
+                $("#answer").text("42");
+                $("#answer").show(800);
             });
             $("#toggle-button").click(function(){
-                $("#titleheader").fadeToggle(
-                    2000,
+                $("#answer").fadeToggle(
+                    600,
                     function(){
                         $("#toggle-button").text("TOGGLED!");
                     }
@@ -62,8 +63,8 @@
     
     <p>hi</p><p>there</p>
     <button id="hider">Hider button</button>
-    <button id="show-button">Show</button>
-    <button id="toggle-button">Toggle</button>
+    <button id="show-button">Show answer</button>
+    <button id="toggle-button">Toggle answer</button>
     <br/>
     <button id="click-button"
       style="position:absolute">Click me!</button>
@@ -72,6 +73,8 @@
       style="position:absolute">
         Don't click me!
     </button>
+    <br/>
+    Answer goes here: <div id="answer" hidden>...</div>
     
 </body>
 </html>
