@@ -17,7 +17,9 @@
                 );
             });
             $("#show-button").click(function(){
-                $("#answer").text("42");
+                
+                $("#answer").load("answer.txt");
+                
                 $("#answer").show(800);
             });
             $("#toggle-button").click(function(){
