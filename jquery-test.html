@@ -19,11 +19,11 @@
             $("#show-button").click(function(){
                 
                 $("#answer").load("answer.php");
-                
-                $("#answer").show(800);
+                $("#two-answers").text("two answers will go here: " + "... and " + "...");
+                $("#all-answers").show(800);
             });
             $("#toggle-button").click(function(){
-                $("#answer").fadeToggle(
+                $("#all-answers").fadeToggle(
                     600,
                     function(){
                         $("#toggle-button").text("TOGGLED!");
@@ -76,7 +76,10 @@
         Don't click me!
     </button>
     <br/>
-    Answer goes here: <div id="answer" hidden>...</div>
-    
+    Answers go here:
+    <div id="all-answers" hidden>
+        <div id="answer">...</div>
+        <div id="two-answers">...</div>
+    </div>
 </body>
 </html>
