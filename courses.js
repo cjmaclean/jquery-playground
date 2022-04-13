@@ -22,12 +22,13 @@ $(document).ready(function() {
             // </div>
             // <br/>
 
-            id1=item.link;
-            $("#series-list").append("<div id='" + id1 + "'></div>");
-            $("#"+id1).append(item.title + " <br/>");
+            id=item.link;
+            hash_id="#"+id;
+            $("#series-list").append("<div id='" + id + "'></div>");
+            $(hash_id).append(item.title + " <br/>");
             progress_string = "progress: " + item.progress + "/" + item.count;
-            $("#"+id1).append('<div class="series-progress">' + progress_string + '</div>');
-            $("#"+id1).append(" <br/>");
+            $(hash_id).append('<div class="series-progress">' + progress_string + '</div>');
+            $(hash_id).append(" <br/>");
 
         });
     });
