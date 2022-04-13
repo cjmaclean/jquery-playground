@@ -12,16 +12,16 @@
             $("#maths-header").click(function() {
                 $("#maths-series").slideToggle(250);
             });
-            $("#python-header").click(function() {
-                $("#python-series").slideToggle(250);
+            $("#breadboard-header").click(function() {
+                $("#breadboard-series").slideToggle(250);
             });
             $("#maths-link").click(function() {
-                $("#maths-series").slideDown(250);
+                $("#maths-series").show();
                 window.location.href = "#maths-header";
             });
-            $("#python-link").click(function() {
-                $("#python-series").slideDown(250);
-                window.location.href = "#python-header";
+            $("#breadboard-link").click(function() {
+                $("#breadboard-series").show();
+                window.location.href = "#breadboard-header";
             });
         });
     </script>
@@ -34,10 +34,10 @@
                 Maths<br/>
                 <div class="series-progress">progress: 0/2</div>
             </li>
-            <li id="python-link">
-                Python programming
+            <li id="breadboard-link">
+                Breadboard computer
                 <br/>
-                <div class="series-progress">progress: 1/2</div>
+                <div class="series-progress">progress: 1/3</div>
             </li>
         </ul>
     </div>
@@ -49,10 +49,14 @@
             <li>Multiplication</li>
             <iframe width="320" height="200" src="https://www.youtube.com/embed/mvOkMYCygps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ul>
-        <h2 id="python-header">Python programming</h2>
-        <ul id="python-series" hidden>
-            <li>Install python</li>
-            <li>Hello world in python</li>
+        <h2 id="breadboard-header">Breadboard computer</h2>
+        <ul id="breadboard-series" hidden>
+            <li>Timer part one</li>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/kRlSFm519Bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>8 bit registers</li>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/CiMaWbz_6E8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>ALU design</li>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/mOVOS9AjgFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ul>
     </div>
 </body>
