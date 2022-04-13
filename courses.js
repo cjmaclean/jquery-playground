@@ -1,18 +1,4 @@
 $(document).ready(function() {
-    $("#maths-header").click(function() {
-        $("#maths-series").slideToggle(250);
-    });
-    $("#breadboard-header").click(function() {
-        $("#breadboard-series").slideToggle(250);
-    });
-    $("#maths-link").click(function() {
-        $("#maths-series").show();
-        window.location.href = "#maths-header";
-    });
-    $("#breadboard-link").click(function() {
-        $("#breadboard-series").show();
-        window.location.href = "#breadboard-header";
-    });
     $.getJSON("courses.json", function(result) {
         $.each(result, function(i,item) {
             //want to insert something like:
@@ -31,12 +17,16 @@ $(document).ready(function() {
             $(hash_id).append(" <br/>");
 
 
-            // Then want to set clicking it to do something
-
+            // Then want to set clicking the series title in the list of series to display that series
             $(hash_id).click(function() {
                 $(".series-contents").hide(); // hide other series.
                 $("#"+ item.code+"-series").show();
                 window.location.href = "#"+item.code+"-header";
+            });
+
+            // And clicking the header above the series contents should toggle showing the contents
+            $("#"+ item.code+"-header").click(function() {
+                $("#"+ item.code+"-series").slideToggle(250);
             });
         });
     });
