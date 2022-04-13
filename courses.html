@@ -23,11 +23,33 @@
                 $("#breadboard-series").show();
                 window.location.href = "#breadboard-header";
             });
+            $.getJSON("courses.json", function(result) {
+                $.each(result, function(i,item) {
+                    //want to insert something like:
+                    // <div id="maths-link">
+                    //     Maths<br/>
+                    //     <div class="series-progress">progress: 0/2</div>
+                    // </div>
+                    // <br/>
+
+                    id1=item.link;
+                    $("#series-list").append("<div id='" + id1 + "'></div>");
+                    $("#"+id1).append(item.title + " <br/>");
+                    progress_string = "progress: " + item.progress + "/" + item.count;
+                    $("#"+id1).append('<div class="series-progress">' + progress_string + '</div>');
+                    $("#"+id1).append(" <br/>");
+
+                });
+            });
         });
     </script>
 </head>
 <body>
     <h1>Your tutorial series</h1>
+    <div id="series-list">
+
+
+    </div>
     <div>
         <ul>
             <li id="maths-link">

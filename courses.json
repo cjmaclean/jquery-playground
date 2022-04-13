@@ -1,0 +1,14 @@
+[
+    {
+        "link": "maths-link",
+        "title": "Maths",
+        "count": 2,
+        "progress": 0
+    },
+    {
+        "link": "breadboard-link",
+        "title": "Breadboard computer",
+        "count": 3,
+        "progress": 1
+    }
+]
