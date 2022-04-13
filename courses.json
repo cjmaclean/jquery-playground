@@ -12,5 +12,12 @@
         "title": "Breadboard computer",
         "count": 3,
         "progress": 1
+    },
+    {
+        "code": "makeup",
+        "link": "makeup-link",
+        "title": "Makeup (vimeo)",
+        "count": 3,
+        "progress": 1
     }
 ]
