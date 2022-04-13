@@ -6,21 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#maths-header").click(function() {
+                $("#maths-series").toggle(250);
+            });
+            $("#python-header").click(function() {
+                $("#python-series").toggle(250);
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Your tutorial series</h1>
     <div>
         <ul>
-            <li>maths</li>
-            <li>python programming</li>
+            <li id="maths-header">maths</li>
+            <li id="python-header">python programming</li>
         </ul>
     </div>
     <div>
-        <ul>
+        <ul id="maths-series">
             <li>addition</li>
             <li>multiplication</li>
         </ul>
-        <ul>
+        <ul id="python-series">
             <li>install python</li>
             <li>hello world in python</li>
         </ul>
