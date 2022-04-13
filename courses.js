@@ -34,6 +34,7 @@ $(document).ready(function() {
             // Then want to set clicking it to do something
 
             $(hash_id).click(function() {
+                $(".series-contents").hide(); // hide other series.
                 $("#"+ item.code+"-series").show();
                 window.location.href = "#"+item.code+"-header";
             });
