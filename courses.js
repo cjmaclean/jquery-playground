@@ -30,6 +30,13 @@ $(document).ready(function() {
             $(hash_id).append('<div class="series-progress">' + progress_string + '</div>');
             $(hash_id).append(" <br/>");
 
+
+            // Then want to set clicking it to do something
+
+            $(hash_id).click(function() {
+                $("#"+ item.code+"-series").show();
+                window.location.href = "#"+item.code+"-header";
+            });
         });
     });
 });

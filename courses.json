@@ -1,11 +1,13 @@
 [
     {
+        "code": "maths",
         "link": "maths-link",
         "title": "Maths",
         "count": 2,
         "progress": 0
     },
     {
+        "code": "breadboard",
         "link": "breadboard-link",
         "title": "Breadboard computer",
         "count": 3,
