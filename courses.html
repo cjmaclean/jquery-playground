@@ -10,10 +10,18 @@
     <script>
         $(document).ready(function() {
             $("#maths-header").click(function() {
-                $("#maths-series").toggle(250);
+                $("#maths-series").slideToggle(250);
             });
             $("#python-header").click(function() {
-                $("#python-series").toggle(250);
+                $("#python-series").slideToggle(250);
+            });
+            $("#maths-link").click(function() {
+                $("#maths-series").slideDown(250);
+                window.location.href = "#maths-header";
+            });
+            $("#python-link").click(function() {
+                $("#python-series").slideDown(250);
+                window.location.href = "#python-header";
             });
         });
     </script>
@@ -22,11 +30,11 @@
     <h1>Your tutorial series</h1>
     <div>
         <ul>
-            <li id="maths-header">
+            <li id="maths-link">
                 Maths<br/>
                 <div class="series-progress">progress: 0/2</div>
             </li>
-            <li id="python-header">
+            <li id="python-link">
                 Python programming
                 <br/>
                 <div class="series-progress">progress: 1/2</div>
@@ -34,11 +42,15 @@
         </ul>
     </div>
     <div>
+        <h2 id="maths-header">Maths</h2>
         <ul id="maths-series">
             <li>Addition</li>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/AuX7nPBqDts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <li>Multiplication</li>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/mvOkMYCygps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ul>
-        <ul id="python-series">
+        <h2 id="python-header">Python programming</h2>
+        <ul id="python-series" hidden>
             <li>Install python</li>
             <li>Hello world in python</li>
         </ul>
